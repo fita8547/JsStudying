@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let pay = 10000;
+    let price = 1500;
+    let num = 5;
+    console.log(pay - price * num);
+    //거스름돈 계산
+
+    let km=50
+    console.log(`마일 ${km*0.62}`);
+    //km를 마일로 변환
+    let num1 ="273";
+    num1 = Number(num1);
+    console.log(typeof(num1));
+
+    console.log(2 + "3");
+    console.log(2 - "3");
+    console.log(2 * "3");
+    console.log(2 / "3");
+    //문자열과 숫자의 연산
+    
+    let n= Number(prompt("첫번째 숫자를 입력하세요 "));
+    let m= Number(prompt("두번째 숫자를 입력하세요 "));
+    let operator = prompt("연산자를 입력하세요 (+, -, *, /) ");
+    switch(operator){
+        case "+":
+            console.log(n+m);
+            break;
+        case "-":
+            console.log(n-m);
+            break;
+        case "*":
+            console.log(n*m);
+            break;
+        case "/":
+            if (m === 0) {
+                console.log("0으로 나눌 수 없습니다.");
+            } else {
+                console.log(n/m);
+            }
+            break;
+        default:
+            console.log("잘못된 연산자입니다.");
+            break
+    }
+</script>
+</html>
