@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function min(array){
+                
+                let min1 = array[0]; 
+                for(let i = 1; i < array.length; i++){
+                 if(array[i] < min1){
+                      min1 = array[i]; 
+                 }
+                }
+                return min1;
+         }
+         const textArray=[27, 273, 32, 103, 275, 24, 57];
+         console.log(`${textArray}중에서 최소값은  ${min(textArray)}`); 
+    </script>
+</body>
+</html>
