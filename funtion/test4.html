@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="show"></pre>
+    <script>
+        //밑에 코드에 cell함수정리하기
+        let text = "<table border='1' style='text-align: center; border-collapse: collapse;'>";
+        text += "<tr><th width='60'>섭씨</th><th width='60'>화씨</th></tr>";
+       
+        
+        function cel(){
+            for(let i = -10; i <= 40; i += 10){
+                const fahrenheit = (i * 9/5) + 32;
+                text += `<tr><td>${i}</td><td>${fahrenheit.toFixed(1)}</td></tr>`;
+            }
+             return text += "</table>";
+        }
+        document.getElementById("show").innerHTML = cel();
+
+    </script>
+</body>
+</html>
