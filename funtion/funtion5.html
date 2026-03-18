@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calljob(callback){
+            console.log("--작업을 시작합니다--");
+
+            callback();
+
+            console.log("--작업이 끝났습니다--");
+        }
+
+        calljob(function(){
+            console.log("실제 심부를 내용 수정중...");
+        });
+    </script>
+</body>
+</html>
