@@ -1,0 +1,47 @@
+[기본 코드]
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쇼핑몰 결제 시스템</title>
+</head>
+<body>
+    <h3>쇼핑몰 최종 결제 금액 계산기</h3>
+    <button onclick="processOrder()">주문 처리하기</button>
+    <p id="receipt"></p>
+
+    <script>
+        function processOrder() {
+            const cartData = [15000, 30000, "품절", 25000, -5000, 45000];
+            let validPrices = [];
+            let receiptText = "";
+
+            cartData.forEach((item) => {
+                try {
+                    if (typeof item === "string") throw "문자열 데이터 오류: " + item;
+                    if (item < 0) throw "잘못된 가격 오류: " + item;
+                    validPrices.push(item);//에러 발생 없을때임 
+                    console.log(`정상적인 가격: ${item}`);
+                } catch(err) {
+                   receiptText += `[에러 처리됨] ${err}<br>`;
+                } finally {
+                    console.log(`검사 완료: ${item}`);
+                }
+            });
+            receiptText += "<br>";
+
+            receiptText += "<br>";
+
+            receiptText += "===최종 결제 목록===<br>";
+
+            const expensivegoods = validPrices.filter(price => price >= 20000);
+
+            const discountegoods =expensivegoods.map(price => price * 0.9);
+
+            discountegoods.forEach(price => {receiptText += `할인된 가격: ${price.toFixed(0)}<br>`;});
+
+            document.getElementById("receipt").innerHTML = receiptText;
+        }
+    </script>
+</body>
+</html>
