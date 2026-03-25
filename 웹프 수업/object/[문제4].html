@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .top-bar {
+            background: #222;
+            color: #fff;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        .rungji-img {
+            margin-top: 18px;
+            border-radius: 10px;
+            animation: floatX 1.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatX {
+            from { transform: translateX(0px); }
+            to { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">룽지 캐릭터 정보</div>
+    <img id="rungjiImage" class="rungji-img" src="./룽지의 사진/copy_8049EA80-28C1-4ECB-BF27-F393E962A995 (2).png" alt="해바라기씨 대포발사" width="300"><br>
+    <p>이룽지의 공격기술인 해바라기씨 대포발사입니다.</p>
+    <script>
+        const imageList = [
+            "./룽지의 사진/IMG_3398 (1).png",
+            "./룽지의 사진/IMG_3544 (1).png",
+            "./룽지의 사진/IMG_3667 (1).png",
+            "./룽지의 사진/IMG_3678 (1).png",
+            "./룽지의 사진/IMG_3715.png",
+            "./룽지의 사진/IMG_3782 (1).png",
+            "./룽지의 사진/IMG_3782.png",
+            "./룽지의 사진/IMG_3810 (1).png",
+            "./룽지의 사진/IMG_3810.png",
+            "./룽지의 사진/copy_8049EA80-28C1-4ECB-BF27-F393E962A995 (2).png"
+        ];
+
+        let currentImageIndex = 0;
+        const changeIntervalMs = 1000;
+        const rungjiImage = document.getElementById("rungjiImage");
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % imageList.length;
+            rungjiImage.src = imageList[currentImageIndex];
+        }, changeIntervalMs);
+
+        rungji=[{name:"이룽지", level:2, hp:100}]
+        document.write(`이름: ${rungji[0].name}<br>`);
+        document.write(rungji[0].level + "<br>");
+        rungji[0].attack = "해바라기씨 대포발사";
+        document.write(`공격기술: ${rungji[0].attack}<br>`);
+        rungji[0].level = 3;
+        document.write(`레벨: ${rungji[0].level}<br>`);
+        rungji[0].hp -= 10;
+        document.write(`남은 hp: ${rungji[0].hp}<br>`);
+        delete rungji[0].attack;
+        document.write(`공격기술: ${rungji[0].attack}<br>`);
+    </script>
+</body>
+</html>
