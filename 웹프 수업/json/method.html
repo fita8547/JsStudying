@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [{name:'이룽지',age:1,hobby:'쳇바퀴 타기'},{name:'삼룽지',age:3,hobby:'멍 떄리기'}];
+        const filteredJson = JSON.stringify(data,["name","hobby"],2);
+        document.write(filteredJson);
+    </script>
+</body>
+</html>
