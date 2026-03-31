@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const viliage = ['2룽지','3룽지','4룽지','5룽지'];
+        const [leader,sub]=viliage;
+        console.log(sub);
+
+        const [leade1,sub1,...others1] = viliage;
+        console.log(others1);
+
+
+
+        let [a,b] =[1,2];
+        [a,b] = [b,a];
+        console.log(a,b);
+
+
+        const ham = {name: '이룽지',age:1,color:'beige'};
+        //속성 이름 그대로 꺼내기
+        const {name,age} = ham;
+        //다음 이름 (변수명)으로 변경해서 꺼내기(name을 ham_name으로,age를 ham_age로)
+
+        const {name:ham_name,age:ham_age} = ham;
+        console.log(ham_name,ham_age);
+
+
+
+
+        const org= {name:'이룽지',age:1};
+        const shallow =org; //주소 값만 복사
+
+        shallow.name = '삼룽지';
+        console.log(org.name); //삼룽지
+
+
+        const deep = {...org,name:'삼룽지',hobby:'챗바퀴'};
+        console.log(org.name);
+        console.log(deep.name);
+    </script>
+</body>
+</html>
