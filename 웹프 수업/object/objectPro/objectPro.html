@@ -42,6 +42,19 @@
         const deep = {...org,name:'삼룽지',hobby:'챗바퀴'};
         console.log(org.name);
         console.log(deep.name);
+        
+        const 이룽지 = {name:'이룽지',age:1,type:'햄스터'};
+
+        const 삼룽지 = {...이룽지,name:'삼룽지',age:3};
+        console.log(삼룽지.name);
+        console.log(삼룽지.type);
+
+
+
+
+        const 이룽지1 = {name:'이룽지',age:1,type:'햄스터'};
+        const 삼룽지1 ={name: '삼룽지',...이룽지1};
+        console.log(삼룽지1.name);
     </script>
 </body>
 </html>

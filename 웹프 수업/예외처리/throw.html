@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            alert('A 위치') 
+            throw "강제 에러"
+            alert('B 위치')
+        }catch(e){
+            alert("c 위치")
+        } finally {
+            alert('D 위치');
+        }
+    </script>
+</body>
+</html>
