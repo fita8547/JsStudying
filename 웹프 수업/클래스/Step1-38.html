@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = []
+        students.push({이름:'룽지',웹프:100,자바:100,소공:100,영어:100})
+        students.push({이름:'모찌',웹프:92,자바:98,소공:96,영어:88})
+        students.push({이름:'감자',웹프:76,자바:96,소공:94,영어:86})
+        students.push({이름:'봉식',웹프:98,자바:52,소공:98,영어:92})
+        function getSumOf(student){
+            return student.웹프 + student.자바 + student.소공 + student.영어
+        }
+
+        function getAvgOf(student){
+            return getSumOf(student) / 4
+            }
+
+            let output = '이름\t총점\t평균\n'
+            for (const s of students) {
+                output += `${s.이름}\t${getSumOf(s)}\t${getAvgOf(s)}\n`
+            }
+            console.log(output)
+    </script>
+</body>
+</html>

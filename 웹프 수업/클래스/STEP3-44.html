@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Square {
+            
+            #length;
+            constructor(length) {
+                this.#length = length;
+            }
+            set length(value) {
+                if (value < 0) {
+                    throw '오류'
+                } else {
+                    this.#length = value;
+                }
+            }
+            get length() {
+                return this.#length;
+            }
+            getperimeter() {
+                return 4 * this.#length;
+            }
+            getArea() {
+                return this.#length * this.#length;
+            }
+        }
+        const square = new Square(10);
+        console.log("정사각형의 둘레: " + square.getperimeter());
+        console.log("정사각형의 넓이: " + square.getArea());
+        console.log(square.length);
+        square.length =-10;
+        console.log("정사각형의 둘레: " + square.getperimeter());
+        console.log("정사각형의 넓이: " + square.getArea());
+    </script>
+</body>
+</html>
