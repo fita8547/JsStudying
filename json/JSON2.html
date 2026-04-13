@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [{name:'이룽지',age:1,hobby:'쳇바퀴 타기'},{name:'삼룽지',age:3,hobby:'멍 떄리기'}];
+        const result = JSON.stringify(data,(key,value) => {
+            if(key === "age" && value < 2){
+                return undefined; 
+            }
+            if(key =="name"){
+                return value.charAt(0) + ""; 
+            }
+            return value; // 나머지 속성은 그대로 반환
+        },2);
+        console.log(result);
+    </script>
+</body>
+</html>

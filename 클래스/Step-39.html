@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createStudents(이름,웹프,자바,소공,영어) {
+            return {
+                이름:이름,
+                웹프:웹프,
+                자바:자바,
+                소공:소공,
+                영어:영어,
+                getSum(){
+                    return this.웹프 + this.자바 + this.소공 + this.영어;
+                },
+                getAvg(){
+                    return this.getSum() / 4;
+                },
+                toString(){
+                    return '${this.이름}\t${this.getSum()}점\t${this.getAvg()}점';  
+                }
+            };
+        }
+    </script>
+</body>
+</html>

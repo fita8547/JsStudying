@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 데이터 준비 (객체 배열)
+        const hamsters = [
+            {name: '이룽지',age:1,snack:"해바라기씨"},
+            {name: '이룽자',age:3},
+            {name: '이룽쥐',age:2},
+            {name:"오룽지",age:1,snack:"밀웜"}
+        ];
+
+        checkSnack = (hamsters) => {
+            hamsters.forEach(hamster => {
+                const checkSnack = hamster.snack || "간식 없음";
+                console.log(`${hamster.name}의 간식 상태: ${checkSnack}`);
+            });
+        }
+        console.log("-- 간식 바구니 점검 시작 --");
+        checkSnack(hamsters);
+        console.log("--점검 완료--");
+    </script>
+</body>
+</html>

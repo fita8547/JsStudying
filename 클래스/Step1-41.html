@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student {
+        
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;    
+            }
+            getSum(){
+                return this.name + "의 나이는 " + this.age + "입니다."
+            }
+            getAvg(){
+                return this.age / 2;   
+            }
+            toString(){
+                return '${this.name}\t${this.getSum()}점\t${this.getAvg()}점';
+            }
+        }
+        const Students = [
+            new Student("홍길동", 20),
+            new Student("김철수", 22),
+            new Student("이영희", 19)
+        ]
+    </script>
+</body>
+</html>
