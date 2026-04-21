@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const buttonA = document.querySelector('button')
+            const buttonB = document.querySelector('input[type=button]')
+        })
+        buttonA.addEventListener('click',(event)=>{
+            event.currentTarget.textContent += '추가'
+        })
+        buttonB.addEventListener('click',(event)=>{
+            event.currentTarget.value += '추가'
+        })
+    </script>
+</head>
+<body>
+    <button>글자</button>
+    <input type="button" value="글자">
+</body>
+</html>
